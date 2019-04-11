@@ -22,7 +22,8 @@ const sleep = function(sec) {
         fs.appendFileSync('./aa', 'addText')
         
         shell.exec(`git add ./`);
-        shell.exec(`git commit -m "update some text"`);
+        // git commit --date="10 day ago" -m "Your commit message" 
+        shell.exec(`git commit --date="1000 day ago" -m "update some text"`);
         sleep(1);
     }
 })();
