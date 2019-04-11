@@ -13,12 +13,6 @@ const sleep = function(sec) {
 
     for (;;) {
         try {
-            fs.appendFile('aa', 'addText', (err) => {
-                if (err) {
-                    throw err;
-                }
-                console.log("File is updated.");
-            });
         
             fs.appendFileSync('./aa', 'addText')
             
