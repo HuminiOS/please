@@ -8,7 +8,8 @@ const sleep = function(sec) {
         }, sec * 1000)
     })
 };
- (async () => {
+
+(async () => {
 
     for (;;) {
         fs.appendFile('aa', 'addText', (err) => {
@@ -18,6 +19,7 @@ const sleep = function(sec) {
             console.log("File is updated.");
         });
     
+        fs.appendFileSync('./aa', 'addText')
         
         shell.exec(`git add ./`);
         shell.exec(`git commit -m "update some text"`);
